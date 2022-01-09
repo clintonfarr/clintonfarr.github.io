@@ -32,12 +32,39 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Post -->
+						<!-- Post: Exam Grades Project -->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2><a href="single.html">Exam Grades Dashboard</a></h2>
+									<p>Analyze the grades of 85 students emphasizing 3 major exams in a dynamic dashboard.</p>
+								</div>
+								<div class="meta">
+									<time class="published" datetime="2022-01-09">January 09, 2022</time>
+					
+								</div>
+							</header>
+						
+								<!-- Tableau Dashboard embed-->
+								<div class='tableauPlaceholder' id='viz1641742095433' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TestAnalyses&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1641742095433');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1090px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='2077px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+							<p><br /> This dashboard utilizes parameters and calculated fields to adjust the data in each plot according to user selection of a particular exam (Exam #1, Exam #2, or Exam #3). In addition, plots can be filtered by class period and student demographic data. Various .csv documents from multiple data sources were converted to a relational database and joined using SQL in pgAdmin. The final export table was cleaned and prepped in excel before importing to Tableau.</p>
+							<footer>
+								<ul class="actions">
+									
+									<li><a href="https://public.tableau.com/views/TestAnalyses/Dashboard1?:language=en-US&:retry=yes&:display_count=n&:origin=viz_share_link" class="button large">View Dashboard in Tableau</a></li>
+									<li><a href="https://github.com/clintonfarr/ExamGradesDashboard/blob/main/SQL%20Script" class="button large">View Script in Github</a></li>
+								</ul>
+								<ul class="stats">
+								</ul>
+							</footer>
+						</article>
+
+						<!-- Post: Personal Finance Project -->
 							<article class="post">
 								<header>
 									<div class="title">
 										<h2><a href="https://github.com/clintonfarr/PersonalFinanceProject">Personal Finance Dashboard</a></h2>
-										<p>Categorical time series of net worth by month</p>
+										<p>A categorical time series of net worth visualizing the magnitude of various assets and liabilities.</p>
 									</div>
 									<div class="meta">
 										<time class="published" datetime="2021-12-29">December 28, 2021</time>
@@ -45,7 +72,7 @@
 									</div>
 								</header>
 								<a href="https://github.com/clintonfarr/PersonalFinanceProject/blob/main/PersonalFinance.png" class="image featured"><img src="images/PersonalFinance.jpg" alt="" /></a>
-								<p>Created a database of nine financial accounts (e.g. checking accounts, savings, loans) using pgAdmin. Queried the database using SQL with 4 different Tableau visualizations in mind. Created a Tableau dashboard to track income, spending, and net worth. Some metrics and axes in the dashboard are hidden for general privacy. </p>
+								<p>A relational database consisting of nine financial accounts (e.g. checking accounts, savings, loans) was created and queried using pgAdmin to create a Tableau dashboard that tracks income, spending, and net worth. Some metrics and axes in the dashboard are hidden for general privacy.</p>
 								<footer>
 									<ul class="actions">
 										<li><a href="https://github.com/clintonfarr/PersonalFinanceProject/blob/main/SQL%20Personal%20Finance%20Project" class="button large">View script in Github</a></li>
@@ -54,7 +81,12 @@
 									<ul class="stats">
 
 									</ul>
+
 								</footer>
+								<p> The query written for the categorical area graph is shown as an example above. View the full script by clicking the button above.   </p>
+
+								<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fclintonfarr%2FPersonalFinanceProject%2Fblob%2Fmain%2FExample%2520Query%2520-%2520Personal%2520Finance%2520Project&style=github&showLineNumbers=on"></script>
+
 							</article>
 
 
@@ -72,7 +104,6 @@
 										<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
 									</div>
 								</header>
-
 								<section>
 									<h3>Text</h3>
 									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
@@ -89,16 +120,13 @@
 									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
 									<h4>Preformatted</h4>
 									<pre><code>i = 0;
-
 while (!deck.isInOrder()) {
   print 'Iteration ' + i;
   deck.shuffle();
   i++;
 }
-
 print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								</section>
-
 								<section>
 									<h3>Lists</h3>
 									<div class="row">
@@ -171,7 +199,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										</div>
 									</div>
 								</section>
-
 								<section>
 									<h3>Table</h3>
 									<h4>Default</h4>
@@ -219,7 +246,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 											</tfoot>
 										</table>
 									</div>
-
 									<h4>Alternate</h4>
 									<div class="table-wrapper">
 										<table class="alt">
@@ -266,7 +292,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										</table>
 									</div>
 								</section>
-
 								<section>
 									<h3>Buttons</h3>
 									<ul class="actions">
@@ -294,7 +319,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										<li><span class="button disabled icon solid fa-download">Disabled</span></li>
 									</ul>
 								</section>
-
 								<section>
 									<h3>Form</h3>
 									<form method="post" action="#">
@@ -346,7 +370,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										</div>
 									</form>
 								</section>
-
 								<section>
 									<h3>Image</h3>
 									<h4>Fit</h4>
@@ -368,7 +391,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									<p><span class="image left"><img src="images/pic07.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
 									<p><span class="image right"><img src="images/pic04.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
 								</section>
-
 							</article>
 						-->
 
