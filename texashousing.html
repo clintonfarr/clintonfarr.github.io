@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Clinton Farr Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Projects</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="https://www.linkedin.com/in/clintonfarr/">LinkedIn</a></li>
+								<li><a href="https://github.com/clintonfarr">Github</a></li>
+								<li><a href="resume.html">Resume</a></li>
+							</ul>
+
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+<!-- Post: DFW Housing Project-->
+<article class="post">
+	<header>
+		<div class="title">
+			<h2>Dallas-Fort Worth House Prices and Trends </a></h2>
+			<p>Visualize the change in median house prices with a map view of the DFW metroplex by zip code from 2012 - 2021.</p>
+		</div>
+		<div class="meta">
+			<time class="published" datetime="2022-01-09">January 15, 2022</time>
+
+		</div>
+	</header>
+
+	<!-- Tableau Dashboard embed-->
+	<div class='tableauPlaceholder' id='viz1642441414510' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='DFWHousingProject&#47;DFWMarketSalePrice' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1642441414510');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='1327px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>	
+	<p><br /> <br />Background: <br />As an aspiring homeowner in the DFW metroplex, I wanted to compare the region's housing market to national trends. According to
+	<a href="https://www.forbes.com/sites/brendarichardson/2022/01/06/2021-housing-market-frenzy-concludes-with-double-digit-price-growth/?sh=7477060b7847">Forbes </a>
+	, the median listing price of a residential home in December 2021 was $375,000. Additionally, the cost of a 2,000 sq. ft. home increased by a remarkable 18.6% from 2020.
+	
+	 <center> <img src="images/house.jpg" alt="" width="500" height="400"> </center>
+	 
+	<br /><br />Process:<br />I located a dataset encompassing the Texas market over the past ten years (2012 - 2021) courtesy of
+	<a href="https://www.redfin.com/news/data-center/">Redfin.com </a>. These data included several housing metrics delineated by zip code.</p>
+
+	
+	<center><a  class="image small"><img src="images/DFWHousingPic2.png" alt="" /></a></center>
+	
+	<p><br />I desired the ability to later group and filter these data by broader regions than zip code; however, city and county information was absent from the dataset. I created a table detailing the city and county for each zip code to resolve this issue. This information was later joined to the original table using SQL. </p>
+
+		<center><a  class="image small"><img src="images/DFWHousingPic3.png" alt="" /></a></center>
+
+	<p><br />The two data tables were imported into a relational database using pgAdmin4. Additional housing metrics, such as the monthly percent change in the median sale price, were calculated with SQL during the querying process. 
+		<center> <img src="images/percentchange.png" alt="" width="350" height="100"> </center>
+		
+		<br /><br /> Calculating the percent change required lag and window functions ordered by date and partitioned by zip code. The final export query written using SQL is below. </p>
+
+		<!-- Github Code Embed-->
+	<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fclintonfarr%2FHousingMarket%2Fblob%2Fmain%2FExport%2520Table%2520Sample&style=github"></script>
+
+	<p><br />The previous query resulted in the following export table imported to Tableau.</p>
+
+		<center><a  class="image small"><img src="images/DFWHousingPic4.png" alt="" /></a></center>
+
+	<p><br /></p>
+		
+
+		<footer>
+		<ul class="actions">
+			<li><a href="index.html" class="button large">Return to Projects</a></li>
+			<li><a href="https://public.tableau.com/app/profile/clinton.farr/viz/DFWHousingProject/DFWMarketSalePrice" class="button large">View Dashboard in Tableau</a></li>
+			<li><a href="https://github.com/clintonfarr/HousingMarket/blob/main/script" class="button large">View Script in Github</a></li>
+		</ul>
+		<ul class="stats">
+		</ul>
+	</footer>
+</article>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

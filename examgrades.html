@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Clinton Farr Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Projects</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="https://www.linkedin.com/in/clintonfarr/">LinkedIn</a></li>
+								<li><a href="https://github.com/clintonfarr">Github</a></li>
+								<li><a href="resume.html">Resume</a></li>
+							</ul>
+
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+<!-- Post: DFW Housing Project-->
+<article class="post">
+	<header>
+		<div class="title">
+			<h2>Exam Grades Dashboard </a></h2>
+			<p>Analyze the grades of 85 students emphasizing 3 major exams in a dynamic dashboard.</p>
+		</div>
+		<div class="meta">
+			<time class="published" datetime="2022-01-09">January 9, 2022</time>
+
+		</div>
+	</header>
+
+	<!-- Tableau Dashboard embed-->
+	<div class='tableauPlaceholder' id='viz1641742095433' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TestAnalyses&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1641742095433');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1090px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='2077px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	<p><br /> <br />Background: <br /> Standardized exam scores are utilized by educators as a metric of the academic progress of students. As an educator, I desired a dynamic dashboard capable of quickly visualizing the exam grades of students across numerous class periods while also incorporating other valuable educational indicators.
+	
+	 <center> <img src="images/classroom.jpg" alt="" width="500" height="400"> </center>
+
+	Process:<br />Three distinct exams are incorporated into the dashboard. The data in each plot adapts to the user selection of each exam. This feature could not be accomplished by filtering and required the combination of a parameter and calculated field. 
+	<br /><br />
+	<center> <img src="images/tableau1.png" alt="" width="581" height="670"> </center>
+	<br />
+	<center> <img src="images/tableau2.png" alt="" width="511" height="303"> </center>
+	<br />
+	Multiple data tables were converted to a relational database in pgAdmin4. This necessitated the use of several joins in the final export query. This query can be viewed below. 
+<br />
+	<!-- Github Embed-->
+
+	<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fclintonfarr%2FExamGradesDashboard%2Fblob%2Fmain%2FSQL%2520Export%2520Query&style=github"></script>
+</p>
+		
+
+		<footer>
+		<ul class="actions">
+			<li><a href="index.html" class="button large">Return to Projects</a></li>
+			<li><a href="https://public.tableau.com/views/DFWHousingProject/DFWMarketOverview?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" class="button large">View Dashboard in Tableau</a></li>
+			<li><a href="#" class="button large">View Script in Github</a></li>
+		</ul>
+		<ul class="stats">
+		</ul>
+	</footer>
+</article>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

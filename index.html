@@ -23,7 +23,7 @@
 							<ul>
 								<li><a href="https://www.linkedin.com/in/clintonfarr/">LinkedIn</a></li>
 								<li><a href="https://github.com/clintonfarr">Github</a></li>
-								<li><a href="single.html">Resume</a></li>
+								<li><a href="resume.html">Resume</a></li>
 							</ul>
 
 					</header>   
@@ -33,11 +33,42 @@
 				<!-- Main -->
 					<div id="main">
 
+						<!-- Post: DFW Housing Project-->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2><a href="texashousing.html">Dallas-Fort Worth House Prices and Market Trends </a></h2>
+									<p>Visualize the change in median house prices with a map view of the DFW metroplex from 2012 - 2021.
+					
+									</p>
+								</div>
+								<div class="meta">
+									<time class="published" datetime="2022-01-09">January 15, 2022</time>
+					
+								</div>
+							</header>
+						
+								<!-- Tableau Dashboard embed-->
+								<div class='tableauPlaceholder' id='viz1642441414510' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='DFWHousingProject&#47;DFWMarketSalePrice' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1642441414510');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='1327px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>								
+								<p><br /> Median house prices in the DFW metroplex are delineated by zip code in this map focused Tableau dashboard. Housing data spans from 2012 to 2021. The % change in median house price (YoY) can be viewed by pressing the blue buttom in the bottom left hand corner of the dashboard.
+									<br /><br /> Notable skills used in this project: postgreSQL (joins, lag and window functions), Tableau (map views, dynamic filters). </p>
+							<footer>
+								<ul class="actions">
+									
+									<li><a href="texashousing.html" class="button large">See More Detail</a></li>
+									<li><a href="https://public.tableau.com/app/profile/clinton.farr/viz/DFWHousingProject/DFWMarketSalePrice" class="button large">View Dashboard in Tableau</a></li>
+									<li><a href="https://github.com/clintonfarr/HousingMarket/blob/main/script" class="button large">View Script in Github</a></li>
+								</ul>
+								<ul class="stats">
+								</ul>
+							</footer>
+						</article>
+						
 						<!-- Post: Exam Grades Project -->
 						<article class="post">
 							<header>
 								<div class="title">
-									<h2>Exam Grades Dashboard</a></h2>
+									<h2><a href="examgrades.html">Exam Grades Dashboard</a></h2>
 									<p>Analyze the grades of 85 students emphasizing 3 major exams in a dynamic dashboard.</p>
 								</div>
 								<div class="meta">
@@ -48,10 +79,12 @@
 						
 								<!-- Tableau Dashboard embed-->
 								<div class='tableauPlaceholder' id='viz1641742095433' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TestAnalyses&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1641742095433');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1090px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='2077px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-							<p><br /> This dashboard utilizes parameters and calculated fields to adjust the data in each plot according to user selection of a particular exam (Exam #1, Exam #2, or Exam #3). In addition, plots can be filtered by class period and student demographic data. Various .csv documents from multiple data sources were converted to a relational database and joined using SQL in pgAdmin. The final export table was cleaned and prepped in excel before importing to Tableau.</p>
+							<p><br /> This dashboard utilizes parameters and calculated fields to adjust the data in each plot according to user selection of a particular exam (Exam #1, Exam #2, or Exam #3). In addition, plots can be filtered by class period and student demographic data. Various .csv documents from multiple data sources were converted to a relational database and joined using SQL in pgAdmin. The final export table was cleaned and prepped in excel before importing to Tableau.
+							<br /><br /> Notable skills used in this project: postgreSQL (joins), Tableau (parameters, calculated fields, dynamic filters) </p>
+
 							<footer>
 								<ul class="actions">
-									
+									<li><a href="examgrades.html" class="button large">See More Detail</a></li>
 									<li><a href="https://public.tableau.com/views/TestAnalyses/Dashboard1?:language=en-US&:retry=yes&:display_count=n&:origin=viz_share_link" class="button large">View Dashboard in Tableau</a></li>
 									<li><a href="https://github.com/clintonfarr/ExamGradesDashboard/blob/main/SQL%20Script" class="button large">View Script in Github</a></li>
 								</ul>
@@ -64,7 +97,7 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2>Personal Finance Dashboard</a></h2>
+										<h2><a href="personalfinance.html">Personal Finance Dashboard</a></h2>
 										<p>A categorical time series of net worth visualizing the magnitude of various assets and liabilities.</p>
 									</div>
 									<div class="meta">
@@ -73,20 +106,18 @@
 									</div>
 								</header>
 								<a href="https://github.com/clintonfarr/PersonalFinanceProject/blob/main/PersonalFinance.png" class="image featured"><img src="images/PersonalFinance.jpg" alt="" /></a>
-								<p>A relational database consisting of nine financial accounts (e.g. checking accounts, savings, loans) was created and queried using pgAdmin to create a Tableau dashboard that tracks income, spending, and net worth. Some metrics and axes in the dashboard are hidden for general privacy.</p>
+								<p>A relational database consisting of nine financial accounts (e.g. checking accounts, savings, loans) was created and queried using pgAdmin4 to create a Tableau dashboard that tracks income, spending, and net worth. Some metrics and axes in the dashboard are hidden for general privacy.
+								<br /><br /> Notable skills used in this project: postgreSQL (joins, views, window function, intervals) </p>
+
 								<footer>
 									<ul class="actions">
+										<li><a href="personalfinance.html" class="button large">See More Detail</a></li>
 										<li><a href="https://github.com/clintonfarr/PersonalFinanceProject/blob/main/SQL%20Personal%20Finance%20Project" class="button large">View script in Github</a></li>
 						
 									</ul>
 									<ul class="stats">
 
 									</ul>
-
-								</footer>
-								<p> The query written for the categorical area graph is shown as an example above. View the full script by clicking the button above.   </p>
-
-								<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fclintonfarr%2FPersonalFinanceProject%2Fblob%2Fmain%2FExample%2520Query%2520-%2520Personal%2520Finance%2520Project&style=github&showLineNumbers=on"></script>
 
 							</article>
 
@@ -97,15 +128,14 @@
 
 						<!-- Intro -->
 							<section id="intro">
-								<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+								<a class="logo"><img src="images/logo.jpg" alt="" /></a>
 								<header>
 									<h2>Clinton Farr Portfolio</h2>
 									<p>Aspiring Data Analyst <br> SQL, Tableau, Excel
-									<br /> <a href="https://www.linkedin.com/in/clintonfarr/">LinkedIn  <br />  <a href="https://github.com/clintonfarr">Github <br />   <a href="single.html">Resume</p>
+									<br /> <a href="https://www.linkedin.com/in/clintonfarr/">LinkedIn</a> - <a href="https://github.com/clintonfarr">Github</a> - <a href="resume.html">Resume</a></p>
 									</p>
 								</header>
 							</section>
-
 
 
 						<!-- About -->

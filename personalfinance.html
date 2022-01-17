@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Clinton Farr Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Projects</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="https://www.linkedin.com/in/clintonfarr/">LinkedIn</a></li>
+								<li><a href="https://github.com/clintonfarr">Github</a></li>
+								<li><a href="resume.html">Resume</a></li>
+							</ul>
+
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+<!-- Post: Personal Finance-->
+<article class="post">
+	<header>
+		<div class="title">
+			<h2>Personal Finance and Net Worth </a></h2>
+			<p> categorical time series of net worth visualizing the magnitude of various assets and liabilities.</p>
+		</div>
+		<div class="meta">
+			<time class="published" datetime="2022-01-09">December 28, 2021</time>
+
+		</div>
+	</header>
+
+	<p>
+	<a href="https://github.com/clintonfarr/PersonalFinanceProject/blob/main/PersonalFinance.png" class="image featured"><img src="images/PersonalFinance.jpg" alt="" /></a>
+	<br />Background:<br />
+	I have used the Mint personal finance tracker for many years. Though I believe it is an excellent
+	tool, it has certain visual limitations that I was itching to explore. One such visualization that
+	I desired was the ability to appreciate the unique weight of individual financial assets and liabilities on total net worth through time.
+	
+	<br /><br />Process: <br />
+	Nine financial account records (e.g. checking, savings, loans) were gathered and converted to a relational database using pgAdmin4.
+
+	<br /> Six views were created to individually calculate gross income, net income, and total spending 
+	for two checking accounts. These views were later utilized in calculations to export data for use in the Monthly Net Income bar chart. 
+	<br />
+	<!-- insert github query 1-->
+	<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fclintonfarr%2FPersonalFinanceProject%2Fblob%2Fmain%2FExample%2520Query%25201&style=github"></script>
+
+	<br />Two views involving window functions were created to yield a time-series balance of the two checking accounts. These views were later utilized in calculations to
+	export data for use in the Combined Checking Balance line graph. Forecasting in Tableau to mid-2022 was also performed on these data. 
+	<br />
+	<!-- insert github query 2-->
+	<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fclintonfarr%2FPersonalFinanceProject%2Fblob%2Fmain%2FExample%2520Query%25202&style=github"></script>
+	<br />
+	The categorical area graph of net worth required 8 joins on date. A time series of each account balance and net worth were returned.
+	<br />
+	<!-- insert github query 3-->
+	<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fclintonfarr%2FPersonalFinanceProject%2Fblob%2Fmain%2FExample%2520Query%25203&style=github"></script>
+	<br />
+	The current positions table in the top left of the dashboard was created by limiting the area graph query to the most recent month through a WHERE statement and INTERVAL function.
+	<br />
+	<!-- insert github query 4-->
+	<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fclintonfarr%2FPersonalFinanceProject%2Fblob%2Fmain%2FExample%2520Query%25204&style=github"></script>
+
+
+
+
+
+	</p>
+		
+
+		<footer>
+		<ul class="actions">
+			<li><a href="index.html" class="button large">Return to Projects</a></li>
+			<li><a href="https://github.com/clintonfarr/PersonalFinanceProject/blob/main/SQL%20Personal%20Finance%20Project" class="button large">View Script in Github</a></li>
+		</ul>
+		<ul class="stats">
+		</ul>
+	</footer>
+</article>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
