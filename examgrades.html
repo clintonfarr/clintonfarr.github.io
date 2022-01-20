@@ -31,12 +31,12 @@
 				<!-- Main -->
 					<div id="main">
 
-<!-- Post: DFW Housing Project-->
+<!-- Post: Exam Grades Projectt-->
 <article class="post">
 	<header>
 		<div class="title">
-			<h2>Exam Grades Dashboard </a></h2>
-			<p>Analyze the grades of 85 students emphasizing 3 major exams in a dynamic dashboard.</p>
+			<h2>Academic Exam Grades </a></h2>
+			<p>Analyze three distinct exam grades for 85 students in a dynamic dashboard from the perspective of an educator. </p>
 		</div>
 		<div class="meta">
 			<time class="published" datetime="2022-01-09">January 9, 2022</time>
@@ -44,24 +44,46 @@
 		</div>
 	</header>
 
+	<center> SUMMARY </center> 
+	<br />
+	Standardized exam scores are utilized by educators as a metric of the academic progress of students. This dynamic dashboard quickly compares exam scores between individual students and students aggregated by class periods with day-to-day work averages. In addition, exam scores are deconstructed to the percent correct of individual learning objectives. 
+	<br />
+	<br />                             
+	The strength of this dashboard lies in the scatter plot. Each student falls in 1 of 4 distinct “Zones” based on the relationship between the student’s exam grade and the student’s day-to-day average. A student’s Zone is suggestive of the overall academic performance of that student. Zones may also have unique implications with additional context given by the classroom educator (i.e. a student in Zone 4 may be suffering from testing anxiety, a student in Zone 3 may be ‘gifted’ but not engaged day-to-day). A list of students in each zone is generated with the “Zone Selection” parameter. 
+	<br />
+	<br />
+	The button at the top of the dashboard changes the view to incorporate the percent correct of each learning objective. This secondary view indicates which exam subtopics the students are succeeding or struggling to understand.
+	<br />
+	<br />
 	<!-- Tableau Dashboard embed-->
-<div class='tableauPlaceholder' id='viz1642557480026' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TestAnalyses&#47;Dashboard12' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1642557480026');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='1827px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-	<p><br /> <br />Background: <br /> Standardized exam scores are utilized by educators as a metric of the academic progress of students. As an educator, I desired a dynamic dashboard capable of quickly visualizing the exam grades of students across numerous class periods while also incorporating other valuable educational indicators.
-	
-	 <center> <img src="images/classroom.jpg" alt="" width="500" height="400"> </center>
-
-	Process:<br />Three distinct exams are incorporated into the dashboard. The data in each plot adapts to the user selection of each exam. This feature could not be accomplished by filtering and required the combination of a parameter and calculated field. 
-	<br /><br />
-	<center> <img src="images/tableau1.png" alt="" width="581" height="670"> </center>
+	<div class='tableauPlaceholder' id='viz1642707033126' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TestAnalyses&#47;Dashboard12' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1642707033126');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='1377px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 	<br />
-	<center> <img src="images/tableau2.png" alt="" width="511" height="303"> </center>
+	<center>BACKGROUND</center>
 	<br />
-	Multiple data tables were converted to a relational database in pgAdmin4. This necessitated the use of several joins in the final export query. This query can be viewed below. 
-<br />
+	Seven data tables containing daily assignment grades, exam grades, and learning objective grades were converted to a relational database using pgAdmin4. Six of these tables were left joined to the table containing daily assignment grades using SQL. Every student name has an associated daily grade, thus the table containing daily assignment grades was chosen as the base table for the join. There is not an exam grade for every student. View the query used to export data below. See the full SQL script here. 
+	<br />
 	<!-- Github Embed-->
+	<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fclintonfarr%2FExamGradesDashboard%2Fblob%2Fmain%2FScript%2520Sample%25201&style=github"></script>
+	<br />
+	The user-defined data clusters within the scatter plot, or “Zones”, are associated with four calculated fields. Each Zone is defined using a Boolean calculation against a set of linear inequalities. For example, Zone 1 includes students with both an Exam Grade above 60 and a daily average above 70 (see below). These calculated fields are assigned distinct colors in the Marks card.
+	<br />
+	<br />
+	<center> <img src="images/Collage1.jpg" alt="" width="400" height="200"> </center>
+	<br />
+	The list of student names within each Zone is generated with a combination of calculated fields and a parameter. The parameter “Zone Selection” allows the user to select from which Zone the list of names populates. The four values within the parameter (Zone 1, Zone 2, Zone 3, and Zone 4) are linked to four distinct calculated fields using a CASE statement. Each linked calculated field contains an IF statement with instructions to populate the names of students who meet the criteria of each Zone (e.g. Zone 1 (list); see below).
+	<br />
+	<br />
+	<center> <img src="images/Collage2.jpg" alt="" width="600" height="225"> </center>
+	<br />
+	<center> <img src="images/Collage3.png" alt="" width="400" height="235"> </center>
+	<br />
+	Finally, three distinct exams are incorporated into the dashboard. The data in each plot (excluding the box and whisker plot) adapts to the user selection of a particular exam (Test 1, Test 2, Test 3). Due to several dependencies, this feature could not be accomplished by filtering alone and required the use of another parameter and calculated field (see below). 
+	<br />
+	<center> <img src="images/Collage4.png" alt="" width="600" height="242"> </center>
 
-	<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fclintonfarr%2FExamGradesDashboard%2Fblob%2Fmain%2FSQL%2520Export%2520Query&style=github"></script>
-</p>
+
+
+	</p>
 		
 
 		<footer>
