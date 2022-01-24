@@ -43,7 +43,13 @@
 								<p><center>SUMMARY</center>
 								Tasked with evaluating prospective gulf coast carbonates and suggesting future drilling targets by integrating various well logs, production, seismic, and gravity data. Software utilized: Petra, Kingdom, Starsteer, Spotfire.
 								<br /><br />
-								<iframe src="images/coveypresentation.pdf" type="application/pdf" style="-webkit-overflow-scrolling:touch; overflow:auto;height: -webkit-fill-available;width: -webkit-fill-available"></iframe>									
+								
+								<iframe id="theFrame" src="images/coveypresentation.pdf" style="height:1000px; width:100%;"></iframe>
+								<script>
+								document.getElementById("theFrame").contentWindow.onload = function() {
+									this.document.getElementsByTagName("img")[0].style.width="100%";
+								};
+								</script>
 
 								</center><br /><br />
 											
