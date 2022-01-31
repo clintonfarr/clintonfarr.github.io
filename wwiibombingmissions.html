@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Clinton Farr Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Projects</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="https://www.linkedin.com/in/clintonfarr/">LinkedIn</a></li>
+								<li><a href="https://github.com/clintonfarr">Github</a></li>
+								<li><a href="resume.html">Resume</a></li>
+								<li><a href="aboutme.html">About</a></li>
+							</ul>
+
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+<!-- Post: Personal Finance-->
+<article class="post">
+	<header>
+		<div class="title">
+			<h2>WWII ALLIED AERIAL BOMBING MISSIONS </a></h2>
+			<p> DATA CLEANSING AND VISUALIZATION OF HISTORICAL RECORDS.</p>
+		</div>
+		<div class="meta">
+			<time class="published" datetime="2022-01-09">January 30, 2022</time>
+
+		</div>
+	</header>
+
+	<p>
+	<center>SUMMARY</center>
+	View the target locations of allied bombing missions during the Second World War with this map-focused Tableau Dashboard. The map is centered on the European and Mediterranean Theaters by default; however, the dataset contains global values including the Pacific and North African Theaters which can be viewed by scrolling the map.  Misisons can be filtered by year and attacking country. 
+	<br /> <br />
+	The dashboard may run slow due to the amount of data entries. Filtering the data by an individual year may help increase speeds. 
+	<br />
+	<!-- Tableau Embed-->
+		<div class='tableauPlaceholder' id='viz1643584003666' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WWIIAerialBombingMissions&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1643584003666');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='1527px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+		<br />
+	<center>BACKGROUND</center>
+
+	This dataset is sourced from <a href="https://www.kaggle.com/usaf/world-war-ii">KAGGLE.COM</a> and contains infomation on allied bombing misisons including target location (lat / long), attacking country, aircraft used, and tonnes of explosive dropped.<br /><br />
+
+	The raw data file contains duplicates, inconsistencies, and blank values that were cleaned in Excel before importing to Tableau:<br />
+	<br />
+	1) COUNTA was used to tally columns relative to a mission id column (178,282 entries).
+	Columns with substantially less data without context to backfill were dropped. <br />
+	2) Rows with NULL values of target latitude and longtitude were dropped.<br />
+	3) Rows with impossible latitude and longtitude values were dropped. <br />
+	4) On a few occasions the latitude and longtitude values were flipped. These inconsistencies were reversed. <br />
+	5) Rows with unrealistic tonnes of explosives were dropped - likely a unit conversion error during tabulation. <br />
+	6) Duplicate rows were eliminated based on "Mission Date" (by day), "Attacking Country", "Target Latitude", and "Target Longtitude". Approximately 100,000 duplicate entries were found.<br />
+	7) Replaced NULL "Attacking Country" values with "X.UNKNOWN". <br />
+		<br />
+	<a href="https://en.wikipedia.org/wiki/Strategic_bombing_during_World_War_II">SOURCES</a> estimate Allied bombers dropped 1,400,000 tonnes  of explosives on Germany, 570,000 tonnes on France, 380,000 tonnes on Italy, etc. Approximately 10,000 entries contain NULL values for "Tonnes of Explosive" in this dataset and total tonnage esimates by target country are substantially lower. 
+	<br />
+	<br />
+	A "Mission" in this dataset is defined by a dinstinct date (by day), distinct attacking country, and distinct combination of target coordinates. 
+	<br /><br />
+	<center> <img src="images/wwiipic2.jpg" alt="" width="600" height="400"> </center>
+	<center><a href="https://www.flickr.com/photos/48413872@N08/43480862145/in/photolist-29ffMsZ-FR3do-LSyezr-cAAfG-cAA8o-cAAd9-cAA76-PwoW-29ffMwM-2yjoqd-LSyeH2-29ffMCP-oTCMuJ-fvPyAC-oTDng8-5hBbCK-7eJ8UA-2j1PV5t-4oXp-4tKW-49dsS-2j1U9HX-dr7zLJ-49ds9-inzC-2yjndG-YCNsN5-2mkfwkj-49dt4-49duX-YBdhgG-49due-FEwmkb-49dtx-FLpBLd-fW63Aw-49dtD-49du1-49duB-2yjozQ-49dsQ-49du7-4p12-4p1c-2k9x4YD-49dsh-49dtp-5UDTWz-6KtQMs-49dvj">Image Source</a>
+	</center>
+	</p>
+		
+
+		<footer>
+		<ul class="actions">
+			<li><a href="index.html" class="button large">Return to Projects</a></li>
+			<li><a href="https://public.tableau.com/views/WWIIAerialBombingMissions/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" class="button large">View Dashboard in Tableau</a></li>
+		</ul>
+		<ul class="stats">
+		</ul>
+	</footer>
+</article>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
